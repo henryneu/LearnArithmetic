@@ -1,5 +1,11 @@
-package com.bkjk.base;
+package com.bkjk.base.sort;
 
+/**
+ * Author: zhouzhenhua
+ * Date: 2018/9/20
+ * Version: 1.0.0
+ * Description:
+ */
 public class BubbleSort {
 
     public static void main(String[] args) {

@@ -1,27 +1,37 @@
-package com.bkjk.base;
+package com.bkjk.base.sort;
 
-public class InsertSort {
+/**
+ * Author: zhouzhenhua
+ * Date: 2018/9/20
+ * Version: 1.0.0
+ * Description:
+ */
+public class SelectionSort {
 
     public static void main(String[] args) {
         int arr[] = {2, 4, 3, 6, 9, 10, 8, 1, 7, 5};
-        insertSort(arr);
+        selectionSort(arr);
         printArray(arr);
     }
 
     /**
-     * 数组进行插入排序
+     * 数组进行选择排序
      *
      * @param arr
      */
-    public static void insertSort(int[] arr) {
+    public static void selectionSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
         }
         int length = arr.length;
-        for (int i = 1; i < length; i++) {
-            for (int j = i - 1; j >= 0 && arr[j] > arr[j + 1]; j--) {
-                swap(arr, j, j + 1);
+        for (int i = 0; i < length - 1; i++) {
+            int smallIndex = i;
+            for (int j = i + 1; j < length; j ++) {
+                if (arr[smallIndex] > arr[j]) {
+                    smallIndex = j;
+                }
             }
+            swap(arr, smallIndex, i);
         }
     }
 
