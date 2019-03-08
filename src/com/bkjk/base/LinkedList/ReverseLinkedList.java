@@ -21,7 +21,7 @@ public class ReverseLinkedList {
             pre.next = node;
             pre = node;
         }
-        System.out.print("原链表：");
+        System.out.println("原链表：");
         print(head.next);
         System.out.println("翻转链表的范围m和n：");
         Scanner sc = new Scanner(System.in);
@@ -30,7 +30,7 @@ public class ReverseLinkedList {
         System.out.println("m = " + m + " n = " + n);
         // 翻转链表
         reverse(head, m, n);
-        System.out.print("翻转之后的链表：");
+        System.out.println("翻转之后的链表：");
         print(head.next);
     }
 
@@ -46,12 +46,12 @@ public class ReverseLinkedList {
     }
 
     /**
-     * 翻转链表的从结点m到结点n的部分
+     * 翻转链表的从结点m到结点n的部分，采用头插法
      *
      * @param head 连标点额头结点
      * @param from 翻转的开始位置
-     * @param to 翻转的结束位置
-     * @return 翻转后的新链表
+     * @param to   翻转的结束位置
+     * @return
      */
     public static void reverse(Node head, int from, int to) {
         Node cur = head.next;
